@@ -31,7 +31,7 @@ Starting development server at http://127.0.0.1:8000/ # 해당 url을 ctrl + 클
 Quit the server with CONTROL-C.
 ```
 ##  django default 화면이 나오는것을 확인
-![django default](image/01.png)
+![django default](image/0808/01.png)
 
 이어서 프로젝트를 진행함
 ```
@@ -40,13 +40,13 @@ Quit the server with CONTROL-C.
 ```
 ## settings 파일 수정
 mysite/settings.py 로 이동 후 INSTALLED_APP 에 'blog', 추가
-![blog-settings](image/02.png)
+![blog-settings](image/0808/02.png)
 
 ## blog 에 index.html 을 생성
 blog 폴데 내부에 templates 폴더를 생성하고 해당 폴더 내부에 index.html 파일을 생성 하고 내부 내용을 간단히 채워준다.   
 ! + tab 으로 html 뼈대를 간단히 생성  
 body 태그 안쪽에서 h1 + tab 으로 태그 생성후 간단한 내용을 채워준다. 
-![index.html](image/03.png)
+![index.html](image/0808/03.png)
 
 ## blog/views 작성
 ``` python
@@ -54,7 +54,7 @@ body 태그 안쪽에서 h1 + tab 으로 태그 생성후 간단한 내용을 �
 def index(request):
     return render(request, 'index.html')
 ```
-![blog-views](image/04.png)
+![blog-views](image/0808/04.png)
 
 ## mysite/urls 작성
 ``` python 
@@ -66,11 +66,11 @@ urlpatterns = [
     path('', blog.views.index, name="index")
 ]
 ```
-![urls](image/05.png)
+![urls](image/0808/05.png)
 
 서버를 실행시켜서 정상적으로 작동하는지 확인한다. 
 ```
 (mysite) $ python manage.py runserver
 ```
 화면과 같이 나온다면 성공  
-![runserver](image/06.png)
+![runserver](image/0808/06.png)
