@@ -12,3 +12,8 @@
 4. db
 5. crud
 6. templates
+
+## 08.27 강의 순서
+1. sign up
+2. log in & out
+3. auth
